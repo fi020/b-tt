@@ -31,16 +31,6 @@ export class SettingsService {
       { new: true, upsert: true }, // Return the updated document, create if not found
     );
 
-    // Step 3: Fetch the user and send OTP
-    // const user = await this.userModel.findById(userId); // Use userId directly
-    // if (!user) {
-    //   throw new NotFoundException('User not found.');
-    // }
-
-    // const username = user.username;
-
-    // await this.sendOtp(email, userId, username);
-
     return setting;
   }
 
