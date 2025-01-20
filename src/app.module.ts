@@ -21,9 +21,7 @@ import { SettingsModule } from './settings/settings.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true, // Make environment variables available globally
-    }),
+    ConfigModule.forRoot({isGlobal: true,}),
     DatabaseModule,
     UserModule,
     TaskModule,
@@ -33,4 +31,4 @@ import { SettingsModule } from './settings/settings.module';
   controllers: [AppController], // added this so that i can test my backend local url
   providers: [AppService], // added this so that i can test my backend local url
 })
-export class AppModule {}
+export class AppModule { }
